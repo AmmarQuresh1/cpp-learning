@@ -21,6 +21,7 @@ Vector& Vector::operator=(const Vector& a) {
     elem = p;
     sz = a.sz;
     return *this; // this is a pointer, dereferencing it gives type of Vector
+    // exists for expression evaluation e.g. a = b = c
 }
 Vector::Vector(Vector&& a): elem {a.elem}, sz{a.sz} {
     a.elem = nullptr;
