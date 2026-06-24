@@ -3,14 +3,14 @@
 
 int main() {
     Vector<int> vi(5);
-    Vector<char> vs(5);
+    Vector<std::string> vs(5);
 
     std::cout<<"Input five numbers:\n";
     for (int i{}; i!=vi.size(); ++i) {
         std::cin>>vi[i];
     }
 
-    std::cout<<"Input five characters:\n";
+    std::cout<<"Input five strings:\n";
     for (int i{}; i!=vs.size(); ++i) {
         std::cin>>vs[i];
     }
@@ -20,7 +20,7 @@ int main() {
     }
     std::cout<<'\n';
     
-    for (auto x: vs) {
+    for (auto& x: vs) { // Use reference (&) to avoid deep copying the string
         std::cout<<x;
     }
     std::cout<<'\n';

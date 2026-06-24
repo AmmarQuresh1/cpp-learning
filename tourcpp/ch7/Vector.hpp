@@ -45,3 +45,4 @@ public:
         delete[] elem;
     };
 };
+// non member free functions can be defined outside the class here
